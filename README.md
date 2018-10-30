@@ -1,4 +1,3 @@
 # NJPython1
 
-NEW LINE INSERTED
-Another version2 file updates
+Repository contains Python programs for Menu GUI and Fibonacci and Factorial Function.
