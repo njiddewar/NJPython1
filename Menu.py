@@ -36,5 +36,5 @@ if __name__ == '__main__':
     menubar.add_cascade(label="Help")
 
     root.config(menu=menubar)
-    root.title('MENU')
+    root.title('MENU PYTHON')
     root.mainloop()
