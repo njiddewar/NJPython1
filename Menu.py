@@ -7,7 +7,7 @@ from tkinter import *
 if __name__ == '__main__':
     root = Tk()
     menubar = Menu(root)
-    filemenu = Menu(menubar, tearoff=0)
+    filemenu = Menu(menubar, tearoff=0,title='PYTHON')
     filemenu.add_command(label="New")
     filemenu.add_command(label="Open")
     filemenu.add_command(label="Save")
@@ -33,7 +33,8 @@ if __name__ == '__main__':
     helpmenu = Menu(menubar, tearoff=0)
     helpmenu.add_command(label="Help Index")
     helpmenu.add_command(label="About...")
-    menubar.add_cascade(label="Help", menu=helpmenu)
+    menubar.add_cascade(label="Help")
 
     root.config(menu=menubar)
+    root.title('MENU')
     root.mainloop()
