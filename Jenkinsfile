@@ -1,16 +1,19 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('Build') {
+      environment {
+        Python = 'Py'
+      }
       parallel {
         stage('Build') {
           steps {
-            build(propagate: true, job: 'Py Menu.py', quietPeriod: 2, wait: true)
+            build(job: 'Py Menu.py', wait: true)
           }
         }
         stage('Build') {
           steps {
-            build(job: 'Py Image1.py', propagate: true, quietPeriod: 2, wait: true)
+            build 'Py Image1.py'
           }
         }
       }
