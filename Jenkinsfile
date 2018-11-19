@@ -5,12 +5,12 @@ pipeline {
       parallel {
         stage('Build') {
           steps {
-            build(propagate: true, job: 'Menu.py', quietPeriod: 2, wait: true)
+            build(propagate: true, job: 'Py Menu.py', quietPeriod: 2, wait: true)
           }
         }
         stage('Build') {
           steps {
-            build(job: 'Image1.py', propagate: true, quietPeriod: 2, wait: true)
+            build(job: 'Py Image1.py', propagate: true, quietPeriod: 2, wait: true)
           }
         }
       }
