@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('Build') {
       environment {
@@ -9,14 +9,12 @@ pipeline {
         stage('Build') {
           steps {
             bat(script: 'py Menu.py', returnStatus: true)
-            build(job: 'py Menu.py', wait: true, quietPeriod: 5)
             echo '"Image Job executed SUCCESSFULLY"'
           }
         }
         stage('Build') {
           steps {
             bat(script: 'py Image.py', returnStatus: true)
-            build(job: 'py Image1.py', quietPeriod: 5, wait: true)
             echo 'Image1 Execued SUCCESSFULLY!!!'
           }
         }
